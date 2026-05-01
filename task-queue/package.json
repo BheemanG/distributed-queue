@@ -1,0 +1,11 @@
+{
+  "name": "task-queue",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "worker": "npm run dev --workspace=packages/worker",
+    "dashboard": "npm run dev --workspace=packages/dashboard"
+  }
+}
