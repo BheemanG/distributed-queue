@@ -1,6 +1,6 @@
 BEGIN;
 
-CREATE TYPE job_status AS ENUM ('pending', 'running', 'completed', 'failed', 'dead')
+CREATE TYPE job_status AS ENUM ('pending', 'running', 'completed', 'failed', 'dead');
 
 CREATE TABLE jobs (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -18,6 +18,6 @@ CREATE TABLE jobs (
     worker_id text,
     created_at timestamptz DEFAULT CURRENT_TIMESTAMP,
     updated_at timestamptz DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 COMMIT;
