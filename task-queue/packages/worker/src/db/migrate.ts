@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import dotenv from 'dotenv'
 
-dotenv.config({ path: path.join(__dirname, '../../../.env') })
+dotenv.config({ path: path.join(__dirname, '../../../../.env') })
 
 const db = new Client({
     connectionString: process.env.DATABASE_URL
